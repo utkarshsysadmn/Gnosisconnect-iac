@@ -20,8 +20,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: arn:aws:iam::419676625339:oidc-provider/token.actions.githubusercontent.com
+          aws-region: us-east-1
 
       - name: Verify AWS Identity
         run: aws sts get-caller-identity
