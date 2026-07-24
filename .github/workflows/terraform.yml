@@ -20,7 +20,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::419676625339:oidc-provider/token.actions.githubusercontent.com
+          role-to-assume: arn:aws:iam::419676625339:role/githubaction-OIDC-Gnosisconnect-iac-role
           aws-region: us-east-1
 
       - name: Verify AWS Identity
